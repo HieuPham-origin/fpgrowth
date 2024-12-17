@@ -1,5 +1,6 @@
 from collections import defaultdict
 import pandas as pd
+from itertools import chain, combinations
 
 class TreeNode:
     def __init__(self, item, count, parent):
@@ -75,7 +76,7 @@ def find_frequent_patterns(fp_tree, item_counts, min_support):
     mine_tree(fp_tree, [], frequent_patterns)
     return frequent_patterns
 
-df = pd.read_csv('baskets.csv', sep=';')
+df = pd.read_csv('basket.csv', sep=';')
 transactions = df['Baskets'].apply(lambda x: x.split(',')).tolist()
 total_transactions = df.shape[0]
 
@@ -84,7 +85,7 @@ for transaction in transactions:
     for item in transaction:
         item_counts[item] += 1
 
-min_support = 0.1 * total_transactions
+min_support = 0.01 * total_transactions
 frequent_items = {item: count for item, count in item_counts.items() if count >= min_support}
 filtered_transactions = []
 for transaction in transactions:
@@ -100,3 +101,48 @@ frequent_patterns = find_frequent_patterns(fp_tree, frequent_items, min_support)
 print("\nFrequent Patterns:")
 for pattern, support in frequent_patterns.items():
     print(f"{pattern}: {support}")
+df = pd.DataFrame(frequent_patterns.items(), columns=["Pattern", "Frequency"])
+df["Pattern"] = df["Pattern"].apply(lambda x: ', '.join(x))
+print(df['Pattern'])
+
+output_file = "frequent_patterns.csv"
+df.to_csv(output_file, sep=";", index=False, encoding="utf-8")
+
+def generate_subset(itemset):
+    return list(chain(*[combinations(itemset, i) for i in range(1, len(itemset))]))
+
+def find_association_rules(frequent_patterns, confidence_threshold):
+    rules = []
+    for pattern, support in frequent_patterns.items():
+        if len(pattern) < 2:
+            continue
+        subsets = generate_subset(pattern)
+        for subset in subsets:
+            remain = tuple(set(pattern) - set(subset))
+            print(remain)
+            if remain:
+                subset_support = frequent_patterns.get(subset, 0)
+                print(subset_support)
+                if subset_support > 0:
+                    confidence = support / subset_support
+                    if confidence >= confidence_threshold:
+                        rules.append((subset, remain, support, confidence))
+    return rules
+
+confidence_threshold = 0.1
+association_rules = find_association_rules(frequent_patterns, confidence_threshold)
+print(association_rules)
+print("\nAssociation Rules:")
+for rule in association_rules:
+    antecedent = ', '.join(rule[0])
+    consequent = ', '.join(rule[1])
+    print(f"Rule: {antecedent} -> {consequent} | Support: {rule[2]} | Confidence: {rule[3]:.5f}")
+
+rules_df = pd.DataFrame(association_rules, columns=["Antecedent", "Consequent", "Support", "Confidence"])
+rules_df["Antecedent"] = rules_df["Antecedent"].apply(lambda x: ', '.join(x))
+rules_df["Consequent"] = rules_df["Consequent"].apply(lambda x: ', '.join(x))
+
+output_rules_file = "association_rules.csv"
+rules_df.to_csv(output_rules_file, sep=";", index=False, encoding="utf-8")
+
+print("\nAssociation Rules saved to:", output_rules_file)

@@ -1,0 +1,11 @@
+dynamic form
+
+form
+nestjs =>backend (graphql/ websocket/ postgre)
+nextjs (reactjs)=>redux
+playwright
+laravel
+docker CICD
+portainer
+github action
+kkho luu tru minio
