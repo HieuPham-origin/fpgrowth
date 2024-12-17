@@ -1,70 +1,749 @@
 Pattern;Frequency
 citrus fruit;795
+citrus fruit, other vegetables;72
+citrus fruit, yogurt;69
+citrus fruit, rolls/buns;70
+citrus fruit, soda;56
+citrus fruit, tropical fruit;43
+citrus fruit, bottled water;39
+citrus fruit, whole milk;107
+citrus fruit, root vegetables;33
+citrus fruit, sausage;18
 coffee;473
+coffee, citrus fruit;20
+coffee, rolls/buns;36
+coffee, tropical fruit;23
+coffee, yogurt;31
+coffee, other vegetables;39
+coffee, whole milk;57
+coffee, pastry;21
+coffee, domestic eggs;21
+coffee, soda;37
+coffee, root vegetables;30
+coffee, bottled water;23
+coffee, sausage;20
+coffee, shopping bags;21
+coffee, canned beer;15
+coffee, pip fruit;16
+coffee, frankfurter;22
 soda;1453
 soda, whole milk;174
+soda, other vegetables;145
+soda, other vegetables, whole milk;17
+soda, rolls/buns;121
+soda, rolls/buns, whole milk;15
+soda, rolls/buns, other vegetables;17
 curd;504
+curd, soda;42
+curd, whipped/sour cream;25
+curd, yogurt;34
+curd, rolls/buns;41
+curd, pip fruit;20
+curd, other vegetables;53
+curd, brown bread;18
+curd, canned beer;18
+curd, whole milk;62
+curd, bottled beer;17
+curd, bottled water;29
+curd, pork;17
+curd, sausage;44
+curd, beef;19
+curd, root vegetables;22
+curd, shopping bags;19
+curd, pastry;21
+curd, citrus fruit;17
+curd, tropical fruit;28
+curd, frankfurter;20
 other vegetables;1827
 other vegetables, whole milk;222
 yogurt;1285
+yogurt, other vegetables;121
+yogurt, other vegetables, whole milk;17
+yogurt, rolls/buns;117
+yogurt, rolls/buns, whole milk;20
 yogurt, whole milk;167
+yogurt, soda;87
 frozen vegetables;419
+frozen vegetables, yogurt;31
+frozen vegetables, tropical fruit;16
+frozen vegetables, rolls/buns;41
+frozen vegetables, root vegetables;32
+frozen vegetables, citrus fruit;24
+frozen vegetables, bottled water;16
+frozen vegetables, other vegetables;47
+frozen vegetables, soda;30
+frozen vegetables, bottled beer;21
+frozen vegetables, whole milk;57
+frozen vegetables, beef;19
+frozen vegetables, pip fruit;20
+frozen vegetables, canned beer;20
+frozen vegetables, sausage;31
+frozen vegetables, frankfurter;16
 specialty chocolate;239
+specialty chocolate, soda;21
+specialty chocolate, whole milk;20
+specialty chocolate, rolls/buns;19
+specialty chocolate, other vegetables;25
+specialty chocolate, tropical fruit;20
+specialty chocolate, citrus fruit;21
 hamburger meat;327
+hamburger meat, bottled beer;16
+hamburger meat, rolls/buns;29
+hamburger meat, soda;25
+hamburger meat, tropical fruit;20
+hamburger meat, other vegetables;33
+hamburger meat, pastry;15
+hamburger meat, root vegetables;19
+hamburger meat, whole milk;46
+hamburger meat, yogurt;25
+candles;66
 tropical fruit;1014
+tropical fruit, other vegetables;94
+tropical fruit, whole milk;123
+tropical fruit, rolls/buns;91
+tropical fruit, yogurt;78
+tropical fruit, root vegetables;55
+tropical fruit, soda;81
 bottled water;908
+bottled water, soda;72
+bottled water, other vegetables;82
+bottled water, rolls/buns;70
+bottled water, whole milk;107
+bottled water, yogurt;57
+bottled water, root vegetables;52
+bottled water, tropical fruit;53
 sausage;903
+sausage, bottled water;47
+sausage, rolls/buns;80
+sausage, rolls/buns, whole milk;17
+sausage, soda;89
+sausage, soda, whole milk;16
+sausage, whole milk;134
+sausage, other vegetables;90
+sausage, root vegetables;50
+sausage, yogurt;86
+sausage, yogurt, whole milk;22
+sausage, tropical fruit;46
+Instant food products;60
 shopping bags;712
+shopping bags, yogurt;53
+shopping bags, soda;66
+shopping bags, other vegetables;74
+shopping bags, sausage;29
+shopping bags, whole milk;95
+shopping bags, pip fruit;28
+shopping bags, rolls/buns;71
+shopping bags, tropical fruit;41
+shopping bags, root vegetables;50
+shopping bags, bottled water;30
+shopping bags, pastry;20
+shopping bags, citrus fruit;27
+cleaner;31
 sliced cheese;210
+sliced cheese, sausage;17
+sliced cheese, whole milk;22
+sliced cheese, soda;17
+sliced cheese, other vegetables;21
+sliced cheese, root vegetables;18
 bottled beer;678
+bottled beer, root vegetables;37
+bottled beer, rolls/buns;60
+bottled beer, yogurt;51
+bottled beer, pastry;31
+bottled beer, whole milk;107
+bottled beer, tropical fruit;38
+bottled beer, bottled water;38
+bottled beer, other vegetables;70
+bottled beer, citrus fruit;25
+bottled beer, pip fruit;23
+bottled beer, soda;44
+bottled beer, canned beer;28
+bottled beer, sausage;50
+bottled beer, shopping bags;22
 domestic eggs;555
+domestic eggs, bottled beer;25
+domestic eggs, whole milk;79
+domestic eggs, rolls/buns;51
+domestic eggs, root vegetables;30
+domestic eggs, soda;38
+domestic eggs, other vegetables;53
+domestic eggs, yogurt;31
+domestic eggs, shopping bags;22
+domestic eggs, bottled water;32
+domestic eggs, canned beer;18
+domestic eggs, brown bread;18
+domestic eggs, pastry;20
+domestic eggs, tropical fruit;32
+domestic eggs, newspapers;23
+domestic eggs, frankfurter;21
+domestic eggs, citrus fruit;19
+domestic eggs, sausage;27
+frozen potato products;72
 whole milk;2363
+flower (seeds);69
 whipped/sour cream;654
+whipped/sour cream, bottled water;27
+whipped/sour cream, rolls/buns;44
+whipped/sour cream, bottled beer;18
+whipped/sour cream, soda;51
+whipped/sour cream, yogurt;44
+whipped/sour cream, tropical fruit;37
+whipped/sour cream, pip fruit;25
+whipped/sour cream, root vegetables;37
+whipped/sour cream, whole milk;69
+whipped/sour cream, citrus fruit;31
+whipped/sour cream, canned beer;23
+whipped/sour cream, pastry;23
+whipped/sour cream, shopping bags;18
+whipped/sour cream, sausage;32
+whipped/sour cream, other vegetables;62
 berries;326
+berries, bottled water;16
+berries, pastry;16
+berries, pip fruit;17
+berries, soda;22
+berries, rolls/buns;25
+berries, other vegetables;40
+berries, whole milk;34
+berries, root vegetables;16
+berries, tropical fruit;19
+berries, yogurt;21
 onions;303
+onions, whipped/sour cream;16
+onions, rolls/buns;26
+onions, soda;22
+onions, whole milk;44
+onions, bottled water;15
+onions, other vegetables;23
+onions, tropical fruit;18
+onions, yogurt;19
+onions, root vegetables;20
+dishes;135
 waffles;277
+waffles, whole milk;39
+waffles, yogurt;17
+waffles, root vegetables;20
+waffles, tropical fruit;17
+waffles, other vegetables;26
+waffles, rolls/buns;24
 chocolate;353
+chocolate, yogurt;24
+chocolate, citrus fruit;16
+chocolate, whole milk;44
+chocolate, bottled water;21
+chocolate, other vegetables;28
+chocolate, soda;25
+chocolate, sausage;21
+chocolate, tropical fruit;21
+chocolate, bottled beer;15
+chocolate, rolls/buns;42
+chocolate, pip fruit;20
+chocolate, root vegetables;18
+chocolate, canned beer;16
 brown bread;563
+brown bread, soda;43
+brown bread, yogurt;35
+brown bread, other vegetables;46
+brown bread, pastry;30
+brown bread, rolls/buns;50
+brown bread, whipped/sour cream;16
+brown bread, canned beer;36
+brown bread, whole milk;67
+brown bread, bottled water;23
+brown bread, bottled beer;23
+brown bread, shopping bags;19
+brown bread, root vegetables;20
+brown bread, sausage;27
+brown bread, pip fruit;25
+brown bread, citrus fruit;26
+brown bread, tropical fruit;22
+brown bread, frankfurter;23
 butter;527
+butter, root vegetables;30
+butter, soda;47
+butter, sausage;29
+butter, pip fruit;17
+butter, brown bread;15
+butter, whole milk;70
+butter, rolls/buns;43
+butter, yogurt;33
+butter, whipped/sour cream;17
+butter, pastry;23
+butter, bottled beer;25
+butter, other vegetables;43
+butter, newspapers;21
+butter, citrus fruit;29
+butter, bottled water;27
+butter, tropical fruit;23
+butter, shopping bags;20
+butter, canned beer;15
+butter, frankfurter;21
 root vegetables;1041
+root vegetables, soda;79
+root vegetables, other vegetables;79
+root vegetables, rolls/buns;86
+root vegetables, whole milk;113
+root vegetables, yogurt;64
 chicken;417
+chicken, domestic eggs;15
+chicken, soda;32
+chicken, yogurt;27
+chicken, pastry;19
+chicken, rolls/buns;43
+chicken, whole milk;51
+chicken, canned beer;17
+chicken, shopping bags;19
+chicken, other vegetables;33
+chicken, curd;17
+chicken, root vegetables;15
+chicken, whipped/sour cream;19
+chicken, margarine;15
+chicken, bottled water;20
+chicken, pip fruit;16
+chicken, bottled beer;15
+chicken, tropical fruit;21
+chicken, citrus fruit;18
+chicken, sausage;16
 specialty bar;209
+specialty bar, soda;19
+specialty bar, whole milk;25
+specialty bar, rolls/buns;18
+specialty bar, yogurt;18
+specialty bar, other vegetables;25
 frankfurter;565
+frankfurter, whole milk;79
+frankfurter, whipped/sour cream;22
+frankfurter, other vegetables;77
+frankfurter, pastry;26
+frankfurter, soda;46
+frankfurter, bottled water;33
+frankfurter, rolls/buns;55
+frankfurter, newspapers;16
+frankfurter, root vegetables;33
+frankfurter, canned beer;20
+frankfurter, shopping bags;23
+frankfurter, bottled beer;25
+frankfurter, yogurt;38
+frankfurter, citrus fruit;26
+frankfurter, pip fruit;27
+frankfurter, sausage;22
+frankfurter, tropical fruit;20
+sparkling wine;46
 fruit/vegetable juice;509
+fruit/vegetable juice, bottled beer;25
+fruit/vegetable juice, whole milk;66
+fruit/vegetable juice, pastry;22
+fruit/vegetable juice, rolls/buns;56
+fruit/vegetable juice, tropical fruit;32
+fruit/vegetable juice, yogurt;33
+fruit/vegetable juice, domestic eggs;16
+fruit/vegetable juice, soda;32
+fruit/vegetable juice, other vegetables;44
+fruit/vegetable juice, root vegetables;27
+fruit/vegetable juice, canned beer;23
+fruit/vegetable juice, butter;21
+fruit/vegetable juice, citrus fruit;20
+fruit/vegetable juice, pip fruit;21
+fruit/vegetable juice, sausage;27
+fruit/vegetable juice, frankfurter;17
+fruit/vegetable juice, bottled water;18
 napkins;331
+napkins, whole milk;36
+napkins, other vegetables;32
+napkins, pastry;26
+napkins, soda;23
+napkins, rolls/buns;26
+napkins, yogurt;26
+napkins, root vegetables;16
+napkins, citrus fruit;21
+napkins, tropical fruit;19
 beef;508
+beef, fruit/vegetable juice;16
+beef, root vegetables;25
+beef, bottled beer;16
+beef, newspapers;25
+beef, whole milk;70
+beef, shopping bags;19
+beef, rolls/buns;24
+beef, bottled water;20
+beef, other vegetables;42
+beef, soda;27
+beef, canned beer;15
+beef, brown bread;23
+beef, domestic eggs;17
+beef, yogurt;33
+beef, butter;17
+beef, pastry;18
+beef, citrus fruit;27
+beef, whipped/sour cream;21
+beef, tropical fruit;17
+beef, frankfurter;15
 pastry;774
+pastry, yogurt;54
+pastry, tropical fruit;42
+pastry, soda;61
+pastry, other vegetables;55
+pastry, rolls/buns;59
+pastry, bottled water;43
+pastry, root vegetables;43
+pastry, citrus fruit;32
+pastry, whole milk;97
+pastry, sausage;48
 canned beer;702
+canned beer, pastry;28
+canned beer, shopping bags;28
+canned beer, whole milk;90
+canned beer, root vegetables;31
+canned beer, soda;47
+canned beer, sausage;37
+canned beer, tropical fruit;38
+canned beer, bottled water;22
+canned beer, rolls/buns;63
+canned beer, yogurt;58
+canned beer, other vegetables;60
+canned beer, citrus fruit;23
+canned beer, pip fruit;24
 white bread;359
+white bread, other vegetables;39
+white bread, sausage;21
+white bread, rolls/buns;32
+white bread, tropical fruit;15
+white bread, yogurt;16
+white bread, citrus fruit;17
+white bread, whole milk;47
+white bread, soda;23
+white bread, domestic eggs;15
+white bread, bottled water;19
+white bread, whipped/sour cream;15
+white bread, canned beer;23
+white bread, brown bread;15
+white bread, root vegetables;19
+pickled vegetables;134
+pickled vegetables, whole milk;15
 meat;252
+meat, whole milk;33
+meat, soda;15
+meat, rolls/buns;20
+meat, other vegetables;32
+meat, root vegetables;20
 ice cream;227
+ice cream, rolls/buns;26
+ice cream, other vegetables;19
+ice cream, whole milk;29
+ice cream, soda;18
 candy;215
+candy, rolls/buns;22
+candy, yogurt;18
+candy, soda;19
+candy, whole milk;32
+candy, citrus fruit;15
+candy, other vegetables;17
 soft cheese;150
+soft cheese, rolls/buns;15
+soft cheese, whole milk;18
+soft cheese, other vegetables;18
+soft cheese, yogurt;19
 misc. beverages;236
+misc. beverages, yogurt;19
+misc. beverages, rolls/buns;20
+misc. beverages, whole milk;21
+misc. beverages, other vegetables;18
+misc. beverages, root vegetables;15
+misc. beverages, sausage;16
+frozen dessert;92
 butter milk;263
+butter milk, shopping bags;15
+butter milk, other vegetables;19
+butter milk, root vegetables;15
+butter milk, rolls/buns;19
+butter milk, tropical fruit;15
+butter milk, whole milk;25
+butter milk, yogurt;19
+butter milk, soda;21
 frozen meals;251
+frozen meals, yogurt;20
+frozen meals, whole milk;29
+frozen meals, other vegetables;32
+frozen meals, rolls/buns;22
+frozen meals, sausage;19
+frozen meals, soda;23
 oil;223
+oil, rolls/buns;20
+oil, soda;27
+oil, other vegetables;27
+oil, yogurt;16
+oil, whole milk;29
 pip fruit;734
+pip fruit, root vegetables;40
+pip fruit, soda;59
+pip fruit, other vegetables;74
+pip fruit, whole milk;99
+pip fruit, pastry;33
+pip fruit, rolls/buns;74
+pip fruit, yogurt;54
+pip fruit, bottled water;30
+pip fruit, sausage;32
+pip fruit, tropical fruit;31
+pip fruit, citrus fruit;22
+frozen fish;102
+frozen fish, whole milk;16
+condensed milk;98
 dessert;353
+dessert, soda;22
+dessert, whole milk;36
+dessert, rolls/buns;30
+dessert, tropical fruit;16
+dessert, other vegetables;31
+dessert, sausage;22
+dessert, shopping bags;18
+dessert, root vegetables;16
+dessert, curd;15
+dessert, bottled water;16
+dessert, yogurt;18
 cream cheese ;299
+cream cheese , rolls/buns;28
+cream cheese , yogurt;16
+cream cheese , whole milk;43
+cream cheese , soda;20
+cream cheese , other vegetables;30
+cream cheese , tropical fruit;20
+cream cheese , root vegetables;21
+cream cheese , citrus fruit;15
 sugar;265
+sugar, whole milk;37
+sugar, bottled water;22
+sugar, soda;18
+sugar, other vegetables;19
+sugar, tropical fruit;15
 rolls/buns;1646
 rolls/buns, whole milk;209
 rolls/buns, other vegetables;158
+rolls/buns, other vegetables, whole milk;18
 hard cheese;220
+hard cheese, rolls/buns;25
+hard cheese, root vegetables;15
+hard cheese, yogurt;19
+hard cheese, whole milk;28
+hard cheese, pip fruit;16
+hard cheese, other vegetables;25
+soups;48
 salty snack;281
+salty snack, other vegetables;33
+salty snack, soda;21
+salty snack, sausage;17
+salty snack, canned beer;15
+salty snack, root vegetables;16
+salty snack, whole milk;29
+salty snack, rolls/buns;29
+salty snack, tropical fruit;15
+salty snack, yogurt;23
 processed cheese;152
+processed cheese, whole milk;22
+processed cheese, rolls/buns;22
+processed cheese, root vegetables;16
 margarine;482
+margarine, sausage;28
+margarine, soda;39
+margarine, whole milk;61
+margarine, tropical fruit;22
+margarine, bottled beer;16
+margarine, other vegetables;48
+margarine, rolls/buns;45
+margarine, citrus fruit;17
+margarine, whipped/sour cream;17
+margarine, pastry;20
+margarine, bottled water;21
+margarine, frankfurter;24
+margarine, pork;20
+margarine, beef;21
+margarine, yogurt;32
+margarine, fruit/vegetable juice;15
+margarine, pip fruit;19
+margarine, canned beer;18
+margarine, butter;21
+margarine, root vegetables;29
+margarine, shopping bags;15
+margarine, curd;16
 cat food;177
+cat food, whole milk;25
+cat food, rolls/buns;16
+cat food, tropical fruit;15
+seasonal products;106
+seasonal products, rolls/buns;15
+spices;40
 newspapers;582
+newspapers, citrus fruit;18
+newspapers, bottled water;27
+newspapers, bottled beer;26
+newspapers, whole milk;84
+newspapers, root vegetables;38
+newspapers, canned beer;28
+newspapers, sausage;27
+newspapers, other vegetables;55
+newspapers, soda;35
+newspapers, whipped/sour cream;23
+newspapers, rolls/buns;45
+newspapers, tropical fruit;28
+newspapers, pastry;30
+newspapers, pip fruit;19
+newspapers, yogurt;43
+newspapers, shopping bags;27
+mustard;92
+house keeping products;45
+prosecco;19
+canned fish;115
+flour;146
+flour, whole milk;20
+flour, tropical fruit;16
+male cosmetics;37
 long life bakery product;268
+long life bakery product, whole milk;36
+long life bakery product, rolls/buns;25
+long life bakery product, tropical fruit;16
+long life bakery product, soda;20
+long life bakery product, yogurt;18
+long life bakery product, sausage;16
+long life bakery product, other vegetables;17
+cling film/bags;74
+dish cleaner;73
+semi-finished bread;142
+semi-finished bread, other vegetables;15
+semi-finished bread, whole milk;25
+packaged fruit/vegetables;127
+packaged fruit/vegetables, rolls/buns;18
+cream cheese;55
 red/blush wine;157
+red/blush wine, other vegetables;17
+red/blush wine, rolls/buns;20
+cooking chocolate;15
+finished products;64
+canned vegetables;82
 pork;555
+pork, other vegetables;59
+pork, shopping bags;23
+pork, yogurt;46
+pork, rolls/buns;51
+pork, pip fruit;24
+pork, pastry;23
+pork, canned beer;25
+pork, whole milk;75
+pork, bottled water;21
+pork, domestic eggs;18
+pork, root vegetables;26
+pork, bottled beer;16
+pork, soda;45
+pork, brown bread;25
+pork, sausage;23
+pork, tropical fruit;23
+pork, citrus fruit;20
 UHT-milk;320
+UHT-milk, root vegetables;15
+UHT-milk, bottled water;16
+UHT-milk, other vegetables;32
+UHT-milk, whole milk;38
+UHT-milk, yogurt;17
+UHT-milk, sausage;17
+UHT-milk, tropical fruit;23
+UHT-milk, soda;19
+UHT-milk, rolls/buns;27
+softener;41
+specialty cheese;72
 hygiene articles;205
+hygiene articles, rolls/buns;20
+hygiene articles, other vegetables;21
+hygiene articles, whole milk;26
+hygiene articles, root vegetables;15
+hygiene articles, soda;16
+liquor;103
+mayonnaise;75
+rice;49
+jam;34
 ham;256
+ham, yogurt;19
+ham, whole milk;41
+ham, other vegetables;24
+ham, rolls/buns;19
+ham, soda;18
+ham, tropical fruit;17
+nut snack;22
+pet care;85
+dog food;67
+chocolate marshmallow;60
+female sanitary products;40
+syrup;21
+sweet spreads;68
+cereals;42
+skin care;20
+spread cheese;100
 beverages;248
+beverages, soda;28
+beverages, other vegetables;26
+beverages, rolls/buns;18
+beverages, sausage;23
+beverages, whole milk;29
+beverages, bottled water;16
 grapes;216
+grapes, root vegetables;16
+grapes, rolls/buns;18
+grapes, other vegetables;24
+grapes, whole milk;29
+grapes, sausage;16
+grapes, soda;21
 herbs;158
+herbs, yogurt;17
+herbs, whole milk;17
+popcorn;48
+pasta;121
+pasta, whole milk;16
+dental care;33
+turkey;80
 white wine;175
+white wine, whole milk;19
+liquor (appetizer);67
+detergent;129
+detergent, rolls/buns;15
+detergent, yogurt;16
+detergent, whole milk;21
 chewing gum;180
+chewing gum, soda;15
+chewing gum, yogurt;21
+chewing gum, other vegetables;16
+chewing gum, whole milk;25
+photo/film;79
+rum;32
+pot plants;117
+pot plants, whole milk;15
+pot plants, other vegetables;15
+canned fruit;21
+curd cheese;46
+ketchup;32
+instant coffee;59
+cake bar;92
+vinegar;51
+organic sausage;22
+nuts/prunes;33
+tidbits;22
+kitchen towels;30
+abrasive cleaner;22
+baking powder;121
+zwieback;60
+sauces;44
+roll products ;80
+fish;29
+potato products;23
+cocoa drinks;16
+salt;89
+snack products;27
+light bulbs;29
+soap;20
+brandy;38
+bathroom cleaner;17
+meat spreads;35
+cookware;17
+specialty fat;29
+ready soups;15
+liver loaf;50
+artif. sweetener;29
+tea;27
+pudding powder;17
+flower soil/fertilizer;16
