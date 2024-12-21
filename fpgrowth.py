@@ -7,7 +7,7 @@ class FPGrowth:
         # self.df = df
         self.min_support = min_support
         self.min_confidence = min_confidence
-            
+
     def find_frequent_patterns(self, fp_tree, item_counts, min_support):
         def mine_tree(tree, prefix, frequent_patterns):
             for item, nodes in tree.header_table.items():
