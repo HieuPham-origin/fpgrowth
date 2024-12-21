@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fpgrowth/products.dart';
 
 class ProductPage extends StatefulWidget {
+  const ProductPage({super.key});
+
   @override
   State<ProductPage> createState() => _ProductPageState();
 }
