@@ -1,11 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
+from fpgrowth import FPGrowth
 
-# Khởi tạo ứng dụng FastAPI
 app = FastAPI()
 
-# Định nghĩa mô hình dữ liệu yêu cầu
 class Item(BaseModel):
     name: str
     description: Optional[str] = None
