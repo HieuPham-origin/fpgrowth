@@ -3,5 +3,13 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "module": "ESNext",                     // Hỗ trợ module hiện đại
+    "moduleResolution": "Node",            // Dùng Node-style module resolution
+    "allowSyntheticDefaultImports": true,  // Cho phép import default
+    "resolveJsonModule": true,             // Cho phép import file JSON
+    "esModuleInterop": true,               // Hỗ trợ ES module interop
+    "typeRoots": ["node_modules/@types"]   // Xác định thư mục chứa type declarations
+  }
 }
