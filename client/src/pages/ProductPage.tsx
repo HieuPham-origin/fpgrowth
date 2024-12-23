@@ -1,10 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import ProductCard2 from '../components/ProductCard2'
-import { Breadcrumbs, FormControl, InputLabel, Link, NativeSelect, Typography } from '@mui/material'
+import { Breadcrumbs, CircularProgress, FormControl, Link, NativeSelect, Typography } from '@mui/material'
+import { fetchProducts } from '../services/productService';
 
 function ProductPage() {
+    interface Product {
+        name: string;
+        link: string;
+        price: string;
+    }
+
+    const [products, setProducts] = useState<Product[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadProducts = async () => {
+            try {
+                const data = await fetchProducts();
+                setProducts(data); 
+            } catch (err) {
+                setError('Failed to load products. ' + err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadProducts();
+    }, []);
+
+
+
+
     return (
+
         <>
             <Header />
             <div className="flex bg-gray-100 py-6 text-center text-sm text-gray-600 w-full p-4">
@@ -33,22 +63,29 @@ function ProductPage() {
                         </NativeSelect>
                     </FormControl>
                 </div>
-                <div className="flex pl-32 pr-32 pt-8">
-                    <ProductCard2
-                        image="https://www.morelandobgyn.com/hs-fs/hubfs/Feminine%20Hygiene%20Products.jpg?width=509&height=339&name=Feminine%20Hygiene%20Products.jpg"
-                        altText="Modern Italian Living Room Décor"
-                        status="In stock"
-                        brand="Honey-Pet"
-                        discount="Save $20.00"
-                        name="Modern Italian Living Room Décor"
-                        price="$290.00"
-                        originalPrice="$310.00"
-                        thumbnails={[
-                            "https://www.morelandobgyn.com/hs-fs/hubfs/Feminine%20Hygiene%20Products.jpg?width=509&height=339&name=Feminine%20Hygiene%20Products.jpg",
-                            "https://www.morelandobgyn.com/hs-fs/hubfs/Feminine%20Hygiene%20Products.jpg?width=509&height=339&name=Feminine%20Hygiene%20Products.jpg",
-                            "https://www.morelandobgyn.com/hs-fs/hubfs/Feminine%20Hygiene%20Products.jpg?width=509&height=339&name=Feminine%20Hygiene%20Products.jpg",
-                        ]}
-                    />
+
+
+                <div className="flex flex-wrap gap-4 pl-32 pr-32 pt-8 justify-center">
+                    {loading ? (
+                        <CircularProgress />
+                    ) : error ? (
+                        <div className="text-red-500">{error}</div>
+                    ) : (
+                        products.map((product) => (
+                            <ProductCard2
+                                key={product.name}
+                                image={product.link} 
+                                altText={product.name}
+                                status="In stock"
+                                brand="Honey-Pet"
+                                discount="Save $20.00"
+                                name={product.name}
+                                price={product.price}  
+                                originalPrice="$310.00"
+                                thumbnails={[product.link, product.link, product.link]}  
+                            />
+                        ))
+                    )}
                 </div>
             </div>
         </>

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import List, Dict
 import pandas as pd
 from fpgrowth import FPGrowth
+from fastapi.middleware.cors import CORSMiddleware
 
 df = pd.read_csv('basket.csv', sep=';')
 fpgrowth = FPGrowth(0.001, 0.1)
@@ -27,8 +28,17 @@ class ProductDetailResponse(BaseModel):
     response_code: int
     data: dict
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
+
 @app.get("/products", response_model=dict)
-def get_products(page: int = Query(1, ge=1), size: int = Query(5, ge=1)):
+def get_products(page: int = Query(1, ge=1), size: int = Query(10, ge=1)):
     start = (page - 1) * size
     end = start + size
     products_slice = products.iloc[start:end]

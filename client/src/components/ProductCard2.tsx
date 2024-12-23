@@ -25,9 +25,13 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
     thumbnails,
 }) => {
     return (
-        <div className="max-w-xs bg-white rounded-lg overflow-hidden">
-            <div className="relative">
-                <img src={image} alt={altText} className="w-full h-64 object-cover" />
+        <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full h-64 bg-gray-100">
+                <img
+                    src={image}
+                    alt={altText}
+                    className="w-[20rem] h-[16rem] object-cover"
+                />
                 <div className="absolute top-2 left-2 bg-gray-500 text-white text-xs px-2 py-1 rounded-full">
                     {status}
                 </div>
@@ -59,12 +63,9 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
                     <a href="#" className="black_button flex-1 px-6 py-2 rounded-full font-semibold transition-colors border border-transparent inline-block w-full text-center">
                         ADD TO CART
                     </a>
-
                     <div className="rounded-full p-2 border hover:bg-black hover:cursor-pointer duration-300 group">
                         <RemoveRedEyeIcon className="text-black cursor-pointer group-hover:text-white" />
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -72,4 +73,3 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
 };
 
 export default ProductCard2;
-
