@@ -1,66 +1,101 @@
-
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
 import RoundedButton from "../components/RoundedButton";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import CarouselSection from "../components/CarouselSection";
 import ProductCard from "../components/ProductCard";
+import { sample_products } from "../utils/constants";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import CartButton from "../components/CartButton";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function HomePage() {
+
     return (
         <div className="bg-white">
-            <header className="flex items-center justify-between px-6 py-4 shadow-md">
-                <nav className="flex space-x-6 text-gray-700">
-                    <a href="#" className="relative group text-gray-700">
-                        Home
-                        <span className="header-underline"></span>
-                    </a>
-                    <a href="#" className="relative group text-gray-700">
-                        New Arrivals
-                        <span className="header-underline"></span>
-                    </a>
-                    <a href="#" className="relative group text-gray-700">
-                        Collections
-                        <span className="header-underline"></span>
-                    </a>
-                    <a href="#" className="relative group text-gray-700">
-                        Resources
-                        <span className="header-underline"></span>
-                    </a>
-                </nav>
+            <Header />
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 bg-black ">
-                    <h1 className="px-3 py-5 text-2xl font-bold text-white">
-                        FPGrowth Shop
-                    </h1>
+            <div className="flex bg-gray-100 py-2 text-center text-sm text-gray-600 w-full">
+                <div className="flex gap-4 animate-infinite-scroll-reverse">
+                    <span className="px-4">Limited Time Offer: Free throw pillows with sofa purchases</span>
+                    <span className="px-4">Free Shipping on orders over $200</span>
+                    <span className="px-4">Sofas 15% off - Use code COZY15</span>
+                    <span className="px-4">Milk starting at $2</span>
+
                 </div>
-
-                <div className="flex items-center space-x-4">
-                    <RoundedButton title="Sign up" onClick={() => { }} className="black_button" />
-                    <RoundedButton title="Login" onClick={() => { }} className="bg-white hover:underline" />
-                </div>
-            </header>
-
-            <div className="bg-gray-100 py-2 text-center text-sm text-gray-600">
-                <span className="px-4">Limited Time Offer: Free throw pillows with sofa purchases</span>
-                <span className="px-4">Free Shipping on orders over $200</span>
-                <span className="px-4">Sofas 15% off - Use code COZY15</span>
-                <span className="px-4">Dining Tables starting at $199</span>
             </div>
 
             <CarouselSection />
 
-            <div className="flex justify-center items-center mt-2 ">
-                <ProductCard
-                    imageUrl="https://via.placeholder.com/200"
-                    name="Comfortable Velvet Dining Chair"
-                    brand="Qing-yun"
-                    price="191.00"
-                    originalPrice="200.00"
-                />
+            <div className="py-10 overflow-hidden flex">
+                <div className="flex gap-6 animate-infinite-scroll">
+                    {[...sample_products, ...sample_products].map((product, index) => (
+                        <ProductCard
+                            key={index}
+                            imageUrl={product.imageUrl}
+                            name={product.name}
+                            brand={product.brand}
+                            price={product.price}
+                            originalPrice={product.originalPrice}
+                        />
+                    ))}
+                </div>
             </div>
+
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-8 bg-white shadow-md rounded-lg mt-10 border-t">
+                {/* Left Section */}
+                <div className="flex-none w-[30rem]">
+                    <h2 className="text-6xl font-bold text-gray-800 mb-4">Furnish Every Corner</h2>
+                    <p className="text-gray-600 mb-6 font-semibold">
+                        From elegant dining room furniture to cozy bedroom sets, our collections
+                        cover every corner of your home. Discover high-quality pieces for every room.
+                    </p>
+                    <button className="px-6 py-3 bg-black text-white rounded-md hover:bg-white transition hover:text-black hover:border border-transparent hover:border-black">
+                        Explore collections
+                    </button>
+                </div>
+
+                {/* Image Section */}
+                <div className="flex-initial w-full h-[30rem] flex items-center justify-start gap-10">
+                    <div className="w-1/2 h-[30rem] overflow-hidden object-cover">
+                        <img
+                            src="https://urban-furniture-demo.myshopify.com/cdn/shop/files/Real-Genuine-cow-leather-bed-Soft-Beds-Bedroom-camas-lit-muebles-de-dormitorio-yatak-mobilya-quarto_jpg.webp?v=1713800018&width=1920"
+                            alt="Dining Room Furniture"
+                            className="rounded-lg shadow-md"
+                        />
+                    </div>
+
+                    <div className="flex flex-col gap-4 text-2xl text-gray-800 w-full h-full justify-center">
+                        <div className="flex justify-between items-center">
+                            <h1>Luxury Sofa Set </h1>
+                            <ArrowForwardIcon />
+                        </div>
+                        <div className="w-full h-[1px] bg-gray-400"></div>
+
+                        <div className="flex justify-between items-center">
+                            <h1>Shop Anytime </h1>
+                            <ArrowForwardIcon />
+                        </div>
+                        <div className="w-full h-[1px] bg-gray-400"></div>
+
+                        <div className="flex justify-between items-center">
+                            <h1>Bedroom Furniture </h1>
+                            <ArrowForwardIcon />
+                        </div>
+                        <div className="w-full h-[1px] bg-gray-400"></div>
+
+                        <div className="flex justify-between items-center">
+                            <h1>Dining Room </h1>
+                            <ArrowForwardIcon />
+                        </div>
+                        <div className="w-full h-[1px] bg-gray-400"></div>
+                    </div>
+                </div>
+            </div>
+
+            <Footer />
+
 
 
 
