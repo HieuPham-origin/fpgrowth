@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-underline {
+  @apply absolute left-0 bottom-0 h-[2px] w-0 bg-black rounded-full transition-all duration-300 group-hover:w-full;
+}
+
+.black_button {
+  @apply bg-black text-white hover:bg-white hover:text-black hover:border-black;
+}
+
+.white_button {
+  @apply bg-white text-black hover:bg-black hover:text-white hover:border-white;
+}
+
+.swiper_slide {
+  @apply flex flex-col gap-4 items-center justify-center px-6 text-center bg-gray-50 h-full bg-cover bg-center;
+}
