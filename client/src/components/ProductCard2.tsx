@@ -2,6 +2,7 @@ import React from 'react';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 interface ProductCard2Props {
+    onCartClick: (productName: string, quantity: number) => void;
     image: string;
     altText: string;
     status: string;
@@ -13,7 +14,9 @@ interface ProductCard2Props {
     thumbnails: string[];
 }
 
+
 const ProductCard2: React.FC<ProductCard2Props> = ({
+    onCartClick,
     image,
     altText,
     status,
@@ -40,7 +43,7 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
                 <div className="text-gray-500 text-sm mb-1">{brand}</div>
                 <div className="text-red-500 text-xs mb-2">{discount}</div>
                 <a
-                    href="#"
+                    href={`products/${name}`}
                     className="text-lg font-semibold text-gray-800 mb-2 relative group">
                     {name}
                     <span className="header-underline"></span>
@@ -60,9 +63,9 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
                     ))}
                 </div>
                 <div className="flex gap-2">
-                    <a href="#" className="black_button flex-1 px-6 py-2 rounded-full font-semibold transition-colors border border-transparent inline-block w-full text-center">
+                    <button onClick={() => onCartClick(name, 1)} className="black_button flex-1 px-6 py-2 rounded-full font-semibold transition-colors border border-transparent inline-block w-full text-center">
                         ADD TO CART
-                    </a>
+                    </button>
                     <div className="rounded-full p-2 border hover:bg-black hover:cursor-pointer duration-300 group">
                         <RemoveRedEyeIcon className="text-black cursor-pointer group-hover:text-white" />
                     </div>

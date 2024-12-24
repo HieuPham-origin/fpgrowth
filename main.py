@@ -31,7 +31,7 @@ class ProductDetailResponse(BaseModel):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Frontend URL
+    allow_origins=["*"],  # Frontend URL
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all headers
@@ -110,24 +110,28 @@ def remove_from_cart(product_name: str, user_id: str = Header(...)):
         "cart": user_carts[user_id]
     }
 
-@app.get("/product/{product_name}", response_model=ProductDetailResponse)
+@app.get("/products/{product_name}", response_model=ProductDetailResponse)
 def get_product_with_recommendations(product_name: str):
-    product_data = products[products["Product"] == product_name]
+    product_name_normalized = product_name.strip().lower()
+
+    product_data = products[products["Product"].str.lower() == product_name_normalized]
     if product_data.empty:
         raise HTTPException(status_code=404, detail="Product not found")
-    
+
     product = Product(
         name=product_data.iloc[0]["Product"],
         link=product_data.iloc[0]["Image Link"],
         price=product_data.iloc[0]["Price"]
     )
 
-    relevant_rules = association_rules[association_rules["Antecedent"] == product_name]
+    relevant_rules = association_rules[
+        association_rules["Antecedent"].str.lower() == product_name_normalized
+    ]
     recommended_products = relevant_rules["Consequent"].unique()
 
     recommendations = []
     for rec_product_name in recommended_products:
-        rec_product_data = products[products["Product"] == rec_product_name]
+        rec_product_data = products[products["Product"].str.lower() == rec_product_name.lower()]
         if not rec_product_data.empty:
             recommendations.append(Product(
                 name=rec_product_data.iloc[0]["Product"],

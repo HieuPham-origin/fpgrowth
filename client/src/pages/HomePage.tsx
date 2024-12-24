@@ -1,16 +1,42 @@
-import RoundedButton from "../components/RoundedButton";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import CarouselSection from "../components/CarouselSection";
 import ProductCard from "../components/ProductCard";
-import { sample_products } from "../utils/constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import CartButton from "../components/CartButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { useState, useEffect } from "react";
+import { fetchProducts } from "../services/productService";
+import { CircularProgress } from "@mui/material";
+
 
 function HomePage() {
+    interface Product {
+        name: string;
+        link: string;
+        price: string;
+    }
+
+    const [products, setProducts] = useState<Product[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadProducts = async () => {
+            try {
+                const data = await fetchProducts(1);
+                setProducts(data);
+            } catch (err) {
+                setError('Failed to load products. ' + err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadProducts();
+    }, []);
+
 
     return (
         <div className="bg-white">
@@ -30,16 +56,24 @@ function HomePage() {
 
             <div className="py-10 overflow-hidden flex">
                 <div className="flex gap-6 animate-infinite-scroll">
-                    {[...sample_products, ...sample_products].map((product, index) => (
-                        <ProductCard
-                            key={index}
-                            imageUrl={product.imageUrl}
-                            name={product.name}
-                            brand={product.brand}
-                            price={product.price}
-                            originalPrice={product.originalPrice}
-                        />
-                    ))}
+                    {loading ? (
+                        <CircularProgress />
+                    ) : error ? (
+                        <div className="text-red-500">{error}</div>
+                    ) : (
+                        [...products, ...products].map((product, index) => (
+                            <ProductCard
+                                key={index}
+                                imageUrl={product.link}
+                                name={product.name}
+                                brand="Brand name"
+                                price={product.price}
+                                originalPrice="10"
+                            />
+                        ))
+                    )}
+
+
                 </div>
             </div>
 

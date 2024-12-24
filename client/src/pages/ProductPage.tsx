@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../components/Header'
-import ProductCard2 from '../components/ProductCard2'
-import { Breadcrumbs, CircularProgress, FormControl, Link, NativeSelect, Typography } from '@mui/material'
-import { fetchProducts } from '../services/productService';
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
+import ProductCard2 from '../components/ProductCard2';
+import { Breadcrumbs, CircularProgress, FormControl, Link, NativeSelect, Pagination, Typography } from '@mui/material';
+import { addToCart, fetchProducts } from '../services/productService';
+import Footer from '../components/Footer';
 
 function ProductPage() {
     interface Product {
@@ -14,27 +15,42 @@ function ProductPage() {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+    const [page, setPage] = useState<number>(1);
+    const itemsPerPage = 10;
+    const totalProducts = 167;
+    const totalPages = Math.ceil(totalProducts / itemsPerPage);
+
+    const loadProducts = async (pageNumber: number) => {
+        try {
+            setLoading(true);
+            const data = await fetchProducts(pageNumber);
+            setProducts(data);
+        } catch (err) {
+            setError('Failed to load products. ' + err);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
-        const loadProducts = async () => {
-            try {
-                const data = await fetchProducts();
-                setProducts(data); 
-            } catch (err) {
-                setError('Failed to load products. ' + err);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        loadProducts();
-    }, []);
+        loadProducts(page);
+    }, [page]);
 
 
+    const handleAddToCart = async (productName: string, quantity: number) => {
+        try {
+            await addToCart(productName, quantity);
+        } catch (error) {
+            console.error("Failed to add product to cart:", error);
 
+        }
+    };
+
+    const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+        setPage(value);
+    };
 
     return (
-
         <>
             <Header />
             <div className="flex bg-gray-100 py-6 text-center text-sm text-gray-600 w-full p-4">
@@ -52,7 +68,7 @@ function ProductPage() {
                         <NativeSelect
                             defaultValue={1}
                             inputProps={{
-                                name: 'age',
+                                name: 'sort',
                                 id: 'uncontrolled-native',
                             }}
                         >
@@ -64,35 +80,36 @@ function ProductPage() {
                     </FormControl>
                 </div>
 
-
                 <div className="flex flex-wrap gap-4 pl-32 pr-32 pt-8 justify-center">
                     {loading ? (
                         <CircularProgress />
                     ) : error ? (
                         <div className="text-red-500">{error}</div>
                     ) : (
-                        products.map((product) => (
+                        products.map((product, index) => (
                             <ProductCard2
-                                key={product.name}
-                                image={product.link} 
+                                key={index}
+                                onCartClick={() => handleAddToCart(product.name, 1)}
+                                image={product.link}
                                 altText={product.name}
                                 status="In stock"
                                 brand="Honey-Pet"
                                 discount="Save $20.00"
                                 name={product.name}
-                                price={product.price}  
+                                price={product.price}
                                 originalPrice="$310.00"
-                                thumbnails={[product.link, product.link, product.link]}  
+                                thumbnails={[product.link, product.link, product.link]}
                             />
                         ))
                     )}
                 </div>
+
+                <Pagination count={totalPages} page={page} onChange={handlePageChange} className='my-4 mx-auto' />
             </div>
+
+            <Footer />
         </>
-
-
-
-    )
+    );
 }
 
-export default ProductPage
+export default ProductPage;
