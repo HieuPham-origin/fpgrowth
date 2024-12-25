@@ -24,7 +24,6 @@ const ShoppingCartSidebar: React.FC<ShoppingCartSidebarProps> = ({ isOpen, onClo
 
     const userId = "sample_user_id"; // Thay bằng giá trị thật nếu cần
 
-    // Fetch cart items
     const fetchCartItems = async () => {
         try {
             setLoading(true);
@@ -40,7 +39,6 @@ const ShoppingCartSidebar: React.FC<ShoppingCartSidebarProps> = ({ isOpen, onClo
         }
     };
 
-    // Remove item from cart
     const removeItem = async (productName: string) => {
         try {
             await axios.delete(ENDPOINTS.CART, {

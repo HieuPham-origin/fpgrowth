@@ -24,7 +24,7 @@ export const getProductRecommendation = async (productName: string) => {
 
 export const addToCart = async (productName: string, quantity: number) => {
     try {
-        const userId = "sample_user_id"; // Thay "sample_user_id" bằng giá trị user ID thực tế hoặc giữ nguyên nếu là mẫu
+        const userId = "sample_user_id"; 
 
         await axios.post(
             ENDPOINTS.CART,
