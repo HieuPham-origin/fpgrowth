@@ -29,6 +29,7 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
     thumbnails,
     isProductDetailPage = false,
 }) => {
+    // name = encodeURIComponent(name);
     return (
         <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="relative w-full h-64 bg-gray-100">
