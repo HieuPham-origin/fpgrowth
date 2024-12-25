@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 5. Chạy backend
 ```powershell
-uvicorn app:app --reload
+uvicorn main:app --reload
 ```
 
 5.1 Ngừng lại bằng lệnh
