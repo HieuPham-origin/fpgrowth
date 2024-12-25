@@ -94,6 +94,6 @@ class FPGrowth:
         output_rules_file = "association_rules.csv"
         rules_df.to_csv(output_rules_file, sep=";", index=False, encoding="utf-8")
 
-df = pd.read_csv('basket.csv', sep=';')
-fpgrowth = FPGrowth(0.01, 0.1)
-fpgrowth.fit(df)
+# df = pd.read_csv('basket.csv', sep=';')
+# fpgrowth = FPGrowth(0.01, 0.1)
+# fpgrowth.fit(df)
