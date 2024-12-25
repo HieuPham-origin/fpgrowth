@@ -155,7 +155,8 @@ const ProductDetail: React.FC = () => {
               name={rec.name}
               price={rec.price.toString()}
               originalPrice="$310.00"
-              thumbnails={[rec.link, rec.link, rec.link]} />
+              thumbnails={[rec.link, rec.link, rec.link]}
+              isProductDetailPage={true} />
           ))}
         </div>
       </div>

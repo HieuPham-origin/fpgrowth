@@ -12,6 +12,7 @@ interface ProductCard2Props {
     price: string;
     originalPrice: string;
     thumbnails: string[];
+    isProductDetailPage?: boolean;
 }
 
 
@@ -26,6 +27,7 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
     price,
     originalPrice,
     thumbnails,
+    isProductDetailPage = false,
 }) => {
     return (
         <div className="max-w-xs bg-white rounded-lg overflow-hidden shadow-lg">
@@ -43,7 +45,7 @@ const ProductCard2: React.FC<ProductCard2Props> = ({
                 <div className="text-gray-500 text-sm mb-1">{brand}</div>
                 <div className="text-red-500 text-xs mb-2">{discount}</div>
                 <a
-                    href={`products/${name}`}
+                    href={isProductDetailPage ? `${name}` : `products/${name}`}
                     className="text-lg font-semibold text-gray-800 mb-2 relative group">
                     {name}
                     <span className="header-underline"></span>
