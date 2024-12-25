@@ -32,11 +32,14 @@ uvicorn app:app --reload
 
 5.1 Ngừng lại bằng lệnh
 
-`deactivate`
+```powershell
+deactivate
+```
 
 6. Chạy frontend
 
 ```powershell
+cd client
 npm i
 ```
 
