@@ -125,8 +125,9 @@ def get_product_with_recommendations(product_name: str):
     )
 
     relevant_rules = association_rules[
-        association_rules["Antecedent"].str.lower() == product_name_normalized
+        association_rules["Antecedent"].str.lower().str.contains(product_name_normalized)
     ]
+
     recommended_products = relevant_rules["Consequent"].unique()
 
     recommendations = []
